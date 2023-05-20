@@ -1,0 +1,7 @@
+footer {
+    background-color: darkgray;
+}
+#desk, #person, #graphic {
+    border-radius: 50%;
+    display: inline;
+}
