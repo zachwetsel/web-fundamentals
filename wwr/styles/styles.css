@@ -40,7 +40,7 @@ nav a:hover {
     background-color: #09814A;
     color: #F0A202;
     text-decoration: none;
-    font-size: 18 px;
+    font-size: 18px;
     padding: 15px 30px;
     margin-top: 50px;
     border-radius: 5px;
@@ -118,4 +118,8 @@ footer .social img {
 }
 main section img {
     box-sizing: border-box;
+}
+.logo {
+    color: #F0A202;
+    text-decoration: none;
 }
