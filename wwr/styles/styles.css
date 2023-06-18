@@ -19,9 +19,6 @@ nav a {
 main section {
     text-align: center;
 }
-#background {
-    height: 725px;
-}
 body {
     background-color: #fcfbfb;
     font-family: "Nanum Gothic", Verdana, sans-serif;
@@ -53,6 +50,7 @@ nav a:hover {
     color: black;
 }
 #background {
+    height: 725px;
     background-color: #121619;
     grid-column: 1/11;
     grid-row: 4/9;
@@ -186,6 +184,113 @@ nav {
     grid-row: 5/8;
     box-shadow: 5px 5px 10px #6f7364;
 }
+.rivers-headline {
+    color: #09814A;
+    font-family: "Bebas Neue", Georgia, serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.salmon-card {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+#salmon-background {
+    height: 900px;
+    background-color: #121619;
+    grid-column: 1/11;
+    grid-row: 1/9;
+    z-index: -1;
+}
+.salmon-img, .desolation-img, .grand-canyon-img {
+    width: 600px;
+    height: 500px;
+}
+.salmon-img {
+    grid-column: 2/6;
+    grid-row: 3/7;
+}
+.salmon-title {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    color: #F0A202;
+    font-family: "Bebas Neue", Georgia, serif;
+    font-size: 2em;
+    text-align: center;
+}
+.salmon-content {
+    grid-column: 6/10;
+    grid-row: 2/8;
+    background-color: #2D4739;
+    padding: 25px;
+    text-align: left;
+    color: white;
+}
+.desolation-card {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+#desolation-background {
+    height: 900px;
+    background-color: #09814A;
+    grid-column: 1/11;
+    grid-row: 1/9;
+    z-index: -1;
+    margin-top: 10px;
+}
+.desolation-img {
+    grid-column: 6/10;
+    grid-row: 3/7;
+}
+.desolation-title {
+    grid-column: 6/10;
+    grid-row: 2/3;
+    color: #F0A202;
+    font-family: "Bebas Neue", Georgia, serif;
+    font-size: 2em;
+    text-align: center;
+}
+.desolation-content {
+    grid-column: 2/6;
+    grid-row: 2/8;
+    background-color: #2D4739;
+    padding: 25px;
+    text-align: left;
+    color: white;
+}
+.grand-canyon-card {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+#grand-canyon-background {
+    height: 900px;
+    background-color: #121619;
+    grid-column: 1/11;
+    grid-row: 1/9;
+    z-index: -1;
+    margin-top: 10px;
+}
+.grand-canyon-img {
+    grid-column: 2/6;
+    grid-row: 3/7;
+}
+.grand-canyon-title {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    color: #F0A202;
+    font-family: "Bebas Neue", Georgia, serif;
+    font-size: 2em;
+    text-align: center;
+}
+.grand-canyon-content {
+    grid-column: 6/10;
+    grid-row: 2/8;
+    background-color: #2D4739;
+    padding: 25px;
+    text-align: left;
+    color: white;
+}
+
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
