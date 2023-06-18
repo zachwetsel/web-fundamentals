@@ -225,6 +225,8 @@ nav {
     padding: 25px;
     text-align: left;
     color: white;
+    align-items: center;
+    justify-content: center;
 }
 .desolation-card {
     display: grid;
@@ -257,6 +259,8 @@ nav {
     padding: 25px;
     text-align: left;
     color: white;
+    align-items: center;
+    justify-content: center;
 }
 .grand-canyon-card {
     display: grid;
@@ -289,6 +293,8 @@ nav {
     padding: 25px;
     text-align: left;
     color: white;
+    align-items: center;
+    justify-content: center;
 }
 
 
