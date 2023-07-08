@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Creation</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <a href="index.html" id="logo_link">
-            <img class="logo" src="images/logo.png" alt="Aeriloth Logo">
+            <img class="logo" src="images/logo-nobg.png" alt="Aeriloth Logo">
         </a>
         <nav>
             <a href="index.html">Home</a>
@@ -17,181 +18,445 @@
         </nav>
     </header>
     <main>
-       <div id="creation-intro">
-        <h2>Character Creation</h2>
-        <p>Making a character that you love is a major part of Dungeons and Dragons. On this page, I will walk you through the general steps for making your own character. I have tailored options to my setting of Aeriloth, but know that there are a ton of other character creation options, just check with your dungeon master on what they allow before bringing in your own options.</p>
-       </div>
-       <div id="character-sheet">
-        <h2>Get Your Character Sheet</h2>
-        <p>To start making your character, you will need a place to store all of your character information. You can download the standard 5th Edition Dungeons and Dragons character sheet from Wizards of the Coast <a href="https://media.wizards.com/2022/dnd/downloads/DnD_5E_CharacterSheet_FormFillable.pdf">here</a>. Whether you want to print a physical copy of this or just edit it digitally is up to you. There are also many other tools you can use to hold your character information such as DNDBeyond, several virtual tabletops such as Roll20, and many other digital apps.</p>
-       </div>
-       <div id="race">
-        <h2>Choose Your Character's Race</h2>
-        <p>Every character has a race, one of the many intelligent peoples of the world of Aeriloth. The most common races in this world are dwarves, elves, humans, and halflings, but there are many other races in this world (and maybe more if you are not playing in Aeriloth, but I have tailored the list here to the ones present in my world). Choose one of the races listed here and write the race name and relevant race information on your character sheet.</p>
-        <div class="race-tabs">
-            <button class="tablinks" onclick="openTab(event, 'Aarakocra')">Aarakocra</button>
-            <button class="tablinks" onclick="openTab(event, 'Aasimar')">Aasimar</button>
-            <button class="tablinks" onclick="openTab(event, 'Dragonborn')">Dragonborn</button>
-            <button class="tablinks" onclick="openTab(event, 'Dwarf')">Dwarf</button>
-            <button class="tablinks" onclick="openTab(event, 'Elf')">Elf</button>
-            <button class="tablinks" onclick="openTab(event, 'Gnome')">Gnome</button>
-            <button class="tablinks" onclick="openTab(event, 'Halfling')">Halfling</button>
-            <button class="tablinks" onclick="openTab(event, 'Human')">Human</button>
-            <button class="tablinks" onclick="openTab(event, 'Tiefling')">Tiefling</button>
+        <div id="content">
+            <div id="creation-intro">
+                <h2>Character Creation</h2>
+                <p>Making a character that you love is a major part of Dungeons and Dragons. On this page, I will walk you through the general steps for making your own character. I have tailored options to my setting of Aeriloth, but know that there are a ton of other character creation options, just check with your dungeon master on what they allow before bringing in your own options.</p>
+            </div>
+            <div id="character-sheet">
+                <h2>Get Your Character Sheet</h2>
+                <p>To start making your character, you will need a place to store all of your character information. You can download the standard 5th Edition Dungeons and Dragons character sheet from Wizards of the Coast <a href="https://media.wizards.com/2022/dnd/downloads/DnD_5E_CharacterSheet_FormFillable.pdf">here</a>. Whether you want to print a physical copy of this or just edit it digitally is up to you. There are also many other tools you can use to hold your character information such as DNDBeyond, several virtual tabletops such as Roll20, and many other digital apps.</p>
+            </div>
+            <div id="race">
+                <h2 id="race-header">Choose Your Character's Race</h2>
+                <p id="race-txt">Every character has a race, one of the many intelligent peoples of the world of Aeriloth. The most common races in this world are dwarves, elves, humans, and halflings, but there are many other races in this world (and maybe more if you are not playing in Aeriloth, but I have tailored the list here to the ones present in my world). Choose one of the races listed here and write the race name and relevant race information on your character sheet.</p>
+                <div id="race-cards">
+                    <div class="flip-card" id="aarakocra">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/aarakocra.jpg" alt="Aarakocra">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Aarakocra</h1>
+                                <h3>Bipedal, humanoid birds with the ability to fly.</h3>
+                                <h2>Traits:</h2>
+                                <p>Medium Size, Flight, Talons, Windcaller</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="aasimar">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/aasimar.jpg" alt="Aasimar">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Aasimar</h1>
+                                <h3>Divine humanoids, believed to be blessed by the gods.</h3>
+                                <h2>Traits:</h2>
+                                <p>Medium Size, Darkvision, Celestial Resistance, Celestial Legacy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="dragonborn">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/dragonborn.jpg" alt="Dragonborn">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Dragonborn</h1>
+                                <h3>Humanoid dragons with the ability to breathe elemental energy.</h3>
+                                <h2>Traits:</h2>
+                                <p>Medium Size, Draconic Ancestry, Breath Weapon, Damage Resistance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="dwarf">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/dwarf.jpg" alt="Dwarf">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Dwarf</h1>
+                                <h3>Newborn people of the earth. Born from the magical Aetherite.</h3>
+                                <h2>Traits:</h2>
+                                <p>Medium Size, Darkvision, Dwarven Resilience, Dwarven Combat Training, Tool Proficiency, Stonecunning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="elf">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/elf.jpg" alt="Elf">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Elf</h1>
+                                <h3>Magical beings who possess knowledge of the old ways of magic.</h3>
+                                <h2>Traits:</h2>
+                                <p>Medium Size, Darkvision, Keen Senses, Fey Ancestry, Trance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="gnome">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/gnome.jpg" alt="Gnome">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Gnome</h1>
+                                <h3>Short innovators who have made names for themselves in the field of technology.</h3>
+                                <h2>Traits:</h2>
+                                <p>Small Size, Darkvision, Gnome Cunning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="halfling">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/halfling.jpg" alt="Halfling">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Halfling</h1>
+                                <h3>Short, homy people who have established peaceful residences in both the sky and on the surface.</h3>
+                                <h2>Traits:</h2>
+                                <p>Small Size, Lucky, Brave, Halfling Nimbleness</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="human">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/human.jpg" alt="Human">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Human</h1>
+                                <h3>Hardy people who make up the bulk of people in the world.</h3>
+                                <h2>Traits:</h2>
+                                <p>Medium Size, Skilled, Feat</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" id="tiefling">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/tiefling.jpg" alt="Tiefling">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Tiefling</h1>
+                                <h3>Born of devils, these humanoids face much prejudice in the world.</h3>
+                                <h2>Traits:</h2>
+                                <p>Medium Size, Darkvision, Hellish Resistance, Infernal Legacy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Can't figure out how to make this work well, so I'm doing something else here until I can figure it out
+                    <div class="race-tabs">
+                    <button class="tablinks" onclick="openTab(event, 'aarakocra')">Aarakocra</button>
+                    <button class="tablinks" onclick="openTab(event, 'aasimar')">Aasimar</button>
+                    <button class="tablinks" onclick="openTab(event, 'dragonborn')">Dragonborn</button>
+                    <button class="tablinks" onclick="openTab(event, 'dwarf')">Dwarf</button>
+                    <button class="tablinks" onclick="openTab(event, 'elf')">Elf</button>
+                    <button class="tablinks" onclick="openTab(event, 'gnome')">Gnome</button>
+                    <button class="tablinks" onclick="openTab(event, 'halfling')">Halfling</button>
+                    <button class="tablinks" onclick="openTab(event, 'human')">Human</button>
+                    <button class="tablinks" onclick="openTab(event, 'tiefling')">Tiefling</button>
+                </div>
+                <div id="aarakocra" class="tabcontent">
+                    <h2>Aarakocra</h2>
+                    <img id="aarakocra-img" src="images/aarakocra.jpg" alt="Aarakocra">
+                    <div class="race-info">
+                        <button class="tablinks" onclick="openTabinTab(event, 'overview')">Overview</button>
+                        <button class="tablinks" onclick="openTabinTab(event, 'mechanics')">Mechanics</button>
+                        <button class="tablinks" onclick="openTabinTab(event, 'subraces')">Subraces</button>
+                        <button class="tablinks" onclick="openTabinTab(event, 'lore')">Lore</button>
+                    </div>
+                    <div id="overview" class="tabintabcontent">
+                        <h3>Bipedal, humanoid birds with the ability to fly</h3>
+                        <h4>Traits: Size - Medium, Flight, Talons, Windcaller, Speed - 30 ft walking or 30 ft flying</h4>
+                    </div>
+                    <div id="mechanics" class="tabintabcontent">
+                        <h3>Size:</h3>
+                        <p>Medium</p>
+                        <h3>Flight</h3>
+                        <p>Because of your wings, you have a flying speed equal to your walking speed. You can't use this flying speed if you're wearing medium or heavy armor.</p>
+                        <h3>Talons</h3>
+                        <p>You have talons that you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
+                        <h3>Wind Caller</h3>
+                        <p>Starting at 3rd level, you can cast the gust of wind spell with this trait, without requiring a material component. Once you cast the spell with this trait, you can't do so again until you finish a long rest. You can also cast the spell using any spell slots you have of 2nd level or higher.
+                            Intelligence, Wisdom, or Charisma is your spellcasting ability for when you cast gust of wind with this trait (choose when you select this race).</p>
+                        <h3>Speed</h3>
+                        <p>30 ft. walking or 30 ft. flying</p>
+                    </div>
+                    <div id="subraces" class="tabintabcontent">
+                        <h4>There is no subrace information available for this race.</h4>
+                    </div>
+                    <div id="lore" class="tabintabcontent">
+                        <h4>A winged people who were created by the Stormrider, aarakocra soar through the sky wherever they wander. Since the rise of the sky islands, aarakocra have thrived in the new world, creating trading empires since they do not require the use of airships.</h4>
+                        <h4>From below, aarakocra look like large birds and thus are sometimes called birdfolk. Only when they roost on a branch or walk across the ground is their Humanoid nature clear. Standing upright, aarakocra are typically about 5 feet tall, and they have long, narrow legs that taper to sharp talons. Feathers cover their bodies - usually red, orange, yellow, brown, blue, or gray. Their heads are also avian, often resembling those of parrots or eagles.</h4>
+                    </div>
+                </div>
+                <div id="aasimar" class="tabcontent">
+                    <h2>Aasimar</h2>
+                    <img id="aasimar-img" src="images/aasimar.jpg" alt="Aasimar">
+                    <div class="race-info">
+                        <button class="tablinks" onclick="openTabinTab(event, 'overview')">Overview</button>
+                        <button class="tablinks" onclick="openTabinTab(event, 'mechanics')">Mechanics</button>
+                        <button class="tablinks" onclick="openTabinTab(event, 'subraces')">Subraces</button>
+                        <button class="tablinks" onclick="openTabinTab(event, 'lore')">Lore</button>
+                    </div>
+                    <div id="overview" class="tabintabcontent">
+                        <h3>Divine humanoids, believed to be blessed by the gods</h3>
+                        <h4>Traits: Size - Medium, Darkvision, Celestial Resistance, Celestial Legacy, Speed - 30 ft walking</h4>
+                    </div>
+                    <div id="mechanics" class="tabintabcontent">
+                        <h3>Size:</h3>
+                        <p>Medium</p>
+                        <h3>Flight</h3>
+                        <p>Because of your wings, you have a flying speed equal to your walking speed. You can't use this flying speed if you're wearing medium or heavy armor.</p>
+                        <h3>Talons</h3>
+                        <p>You have talons that you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
+                        <h3>Wind Caller</h3>
+                        <p>Starting at 3rd level, you can cast the gust of wind spell with this trait, without requiring a material component. Once you cast the spell with this trait, you can't do so again until you finish a long rest. You can also cast the spell using any spell slots you have of 2nd level or higher.
+                            Intelligence, Wisdom, or Charisma is your spellcasting ability for when you cast gust of wind with this trait (choose when you select this race).</p>
+                        <h3>Speed</h3>
+                        <p>30 ft. walking or 30 ft. flying</p>
+                    </div>
+                    <div id="subraces" class="tabintabcontent">
+                        <h4>There is no subrace information available for this race.</h4>
+                    </div>
+                    <div id="lore" class="tabintabcontent">
+                        <h4>A winged people who were created by the Stormrider, aarakocra soar through the sky wherever they wander. Since the rise of the sky islands, aarakocra have thrived in the new world, creating trading empires since they do not require the use of airships.</h4>
+                        <h4>From below, aarakocra look like large birds and thus are sometimes called birdfolk. Only when they roost on a branch or walk across the ground is their Humanoid nature clear. Standing upright, aarakocra are typically about 5 feet tall, and they have long, narrow legs that taper to sharp talons. Feathers cover their bodies - usually red, orange, yellow, brown, blue, or gray. Their heads are also avian, often resembling those of parrots or eagles.</h4>
+                    </div>                    
+                </div>
+                <div id="dragonborn" class="tabcontent">
+                    <h2>Dragonborn</h2>
+                    <h3>Humanoid dragons with the ability to breathe elemental energy</h3>
+                    <h4>Traits: Size - Medium, Draconic Ancestry, Breath Weapon, Damage Resistance, Speed - 30 ft walking</h4>
+                    <img id="vdragonborn-img" src="images/dragonborn.jpg" alt="Dragonborn">
+                </div>
+                <div id="dwarf" class="tabcontent">
+                    <h2>Dwarf</h2>
+                    <h3>A hardworking people who have carved citadels into the earth</h3>
+                    <h4>Traits: Size - Medium, Darkvision, Dwarven Resilience, Dwarven Combat Training, Tool Proficiency, Stonecunning, Speed - 25 ft. walking</h4>
+                    <img id="dwarf-img" src="images/dwarf.jpg" alt="Dwarf">
+                </div>
+                <div id="elf" class="tabcontent">
+                    <h2>Elf</h2>
+                    <h3>A magical people who possess knowledge of the old ways of magic</h3>
+                    <h4>Traits: Size - Medium, Darkvision, Keen Senses, Fey Ancestry, Trance, Speed - 30 ft. walking</h4>
+                    <img id="elf-img" src="images/elf.jpg" alt="Elf">
+                </div>
+                <div id="gnome" class="tabcontent">
+                    <h2>Gnome</h2>
+                    <h3>Short innovators who have made names for themselves in the field of technology</h3>
+                    <h4>Traits: Size - Small, Darkvision, Gnome Cunning, Speed - 25 ft. walking</h4>
+                    <img id="gnome-img" src="images/gnome.jpg" alt="Gnome">
+                </div>
+                <div id="halfling" class="tabcontent">
+                    <h2>Halfling</h2>
+                    <h3>Short, homy people who have established peaceful residences in both the skies and on the surface</h3>
+                    <h4>Traits: Size - Small, Lucky, Brave, Halfling Nimbleness, Speed - 25 ft. walking</h4>
+                    <img id="halfling-img" src="images/halfling.jpg" alt="Halfling">
+                </div>
+                <div id="human" class="tabcontent">
+                    <h2>Human</h2>
+                    <h3>Hardy people who make up the bulk of people in the world</h3>
+                    <h4>Traits: Size - Medium, Skilled, Feat, Speed - 30 ft. walking</h4>
+                    <img id="human-img" src="images/human.jpg" alt="Human">
+                </div>
+                <div id="tiefling" class="tabcontent">
+                    <h2>Tiefling</h2>
+                    <h3>Born of devils, these humoids face a lot of prejudice in the world</h3>
+                    <h4>Traits: Size - Medium, Darkvision, Hellish Resistance, Infernal Legacy, Speed - 30 ft. walking</h4>
+                    <img id="tiefling-img" src="images/tiefling.jpg" alt="Tiefling">
+                </div>
+            </div>-->
+            </div>
+            <div id="class">
+                <h2 id="class-header">Choose Your Character's Class</h2>
+                <p>Every adventurer has a class describing their skills and special talents and the tactics they employ while out adventuring. Keep in mind that in the world of Aeriloth, lowfolk who possess magic are hunted and so they must keep their magic hidden. You can still choose magical characters, but this may influence who your character is. Choose from the classes and write it on your character sheet.</p>
+                <div class="class-tabs">
+                    <button class="tablinks" onclick="openTab(event, 'barbarian')">Barbarian</button>
+                    <button class="tablinks" onclick="openTab(event, 'bard')">Bard</button>
+                    <button class="tablinks" onclick="openTab(event, 'cleric')">Cleric</button>
+                    <button class="tablinks" onclick="openTab(event, 'druid')">Druid</button>
+                    <button class="tablinks" onclick="openTab(event, 'fighter')">Fighter</button>
+                    <button class="tablinks" onclick="openTab(event, 'monk')">Monk</button>
+                    <button class="tablinks" onclick="openTab(event, 'paladin')">Paladin</button>
+                    <button class="tablinks" onclick="openTab(event, 'ranger')">Ranger</button>
+                    <button class="tablinks" onclick="openTab(event, 'rogue')">Rogue</button>
+                    <button class="tablinks" onclick="openTab(event, 'sorcerer')">Sorcerer</button>
+                    <button class="tablinks" onclick="openTab(event, 'warlock')">Warlock</button>
+                    <button class="tablinks" onclick="openTab(event, 'wizard')">Wizard</button>
+                </div>
+                <div id="barbarian" class="tabcontent">
+                    <h2>Barbarian</h2>
+                    <h3>A fierce warrior who can enter into a battle rage.</h3>
+                    <h4>Main stats should be Constitution and Strength.</h4>
+                </div>
+                <div id="bard" class="tabcontent">
+                    <h2>Bard</h2>
+                    <h3>An inspiring magician whose power echoes the music of creation</h3>
+                    <h4>Main stat should be Charisma.</h4>
+                </div>
+                <div id="cleric" class="tabcontent">
+                    <h2>Cleric</h2>
+                    <h3>A priestly champion who wields divine magic in service of a higher power.</h3>
+                    <h4>Main stat should be Wisdom.</h4>
+                </div>
+                <div id="druid" class="tabcontent">
+                    <h2>Druid</h2>
+                    <h3>A priest of the Old Faith, wielding the powers of nature and adopting animal forms.</h3>
+                    <h4>Main stat should be Wisdom.</h4>
+                </div>
+                <div id="fighter" class="tabcontent">
+                    <h2>Fighter</h2>
+                    <h3>A master of martial combat, skilled with a variety of weapons and armor.</h3>
+                    <h4>Main stats should be Strength and Dexterity.</h4>
+                </div>
+                <div id="monk" class="tabcontent">
+                    <h2>Monk</h2>
+                    <h3>A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection.</h3>
+                    <h4>Main stats should be Dexterity and Wisdom.</h4>
+                </div>
+                <div id="paladin" class="tabcontent">
+                    <h2>Paladin</h2>
+                    <h3>A holy warrior bound to a sacred oath.</h3>
+                    <h4>Main stats should be Strength and Charisma</h4>
+                </div>
+                <div id="ranger" class="tabcontent">
+                    <h2>Ranger</h2>
+                    <h3>A ranger who combats threats on the edges of civilization.</h3>
+                    <h4>Main stats should be Strength and Dexterity.</h4>
+                </div>
+                <div id="rogue" class="tabcontent">
+                    <h2>Rogue</h2>
+                    <h3>A scoundrel who uses stealth and trickery to overcome obstacles and enemies.</h3>
+                    <h4>Main stat should be Dexterity.</h4>
+                </div>
+                <div id="sorcerer" class="tabcontent">
+                    <h2>Sorcerer</h2>
+                    <h3>A spellcaster who draws on inherent magic from a gift or bloodling.</h3>
+                    <h4>Main stat should be Charisma.</h4>
+                </div>
+                <div id="warlock" class="tabcontent">
+                    <h2>Warlock</h2>
+                    <h3>A wielder of magic that is derived from a bargain with an extraplanar entity.</h3>
+                    <h4>Main stat should be Charisma.</h4>
+                </div>
+                <div id="wizard" class="tabcontent">
+                    <h2>Wizard</h2>
+                    <h3>A scholarly magic-user capable of manipulating the structures of reality.</h3>
+                    <h4>Main stat should be Intelligence.</h4>
+                </div>
+            </div>
+            <div id="ability-scores">
+                <h2>Determine Your Ability Scores</h2>
+                <p>Much of what your character does in the game is determined by their six abilities: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Each ability has a score that you will write on your character sheet. You will also write an ability modifier next to each score that you will use to modify your dice rolls when you are playing the game. The abilities are defined as follows:</p>
+                <table id="ability-table">
+                    <tr>
+                        <th>Ability</th>
+                        <th>Description</th>
+                        <th>Skills</th>
+                    </tr>
+                    <tr>
+                        <td>Strength</td>
+                        <td>Measures natural athleticism and bodily power</td>
+                        <td>Athletics</td>
+                    </tr>
+                    <tr>
+                        <td>Dexterity</td>
+                        <td>Measures physical agility, reflexes, balance, and poise</td>
+                        <td>Acrobatics, Sleight of Hand, Stealth</td>
+                    </tr>
+                    <tr>
+                        <td>Constitution</td>
+                        <td>Measures health, stamina, and vital force</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>Intelligence</td>
+                        <td>Measures mental acuity, information recall, and analytical thinking</td>
+                        <td>Arcana, History, Investigation, Nature, Religion</td>
+                    </tr>
+                    <tr>
+                        <td>Wisdom</td>
+                        <td>Measures awareness, intuition, and insight</td>
+                        <td>Animal Handling, Insight, Medicine, Perception, Survival</td>
+                    </tr>
+                    <tr>
+                        <td>Charisma</td>
+                        <td>Measures confidence, eloquence, and leadership</td>
+                        <td>Deception, Intimidation, Performance, Persuasion</td>
+                    </tr>
+                </table>
+                <p>There are many different ways to generate your ability scores. We will be using the standard array method in my campaign, but check with your dungeon master if you are not playing with me to determine the best way for you to generate your stats. Keep in mind that the class section above recommends what you make your best stats be. An ability score is a number between 1 and 20 that shows how good your character is with that ability. The higher the number, the better they are. The standard array we will be using are the numbers 15, 14, 13, 12, 10, 8. Determine which of these numbers you would like to occupy each of your abilities, using each number once. As a bonus, you also get to determine one ability that you will increase by an additional 2 points and another ability that you will increase by 1 point. Write your final ability score number in each of the labeled spots on your character sheet.</p>
+            </div>
+            <div id="score-modifiers">
+                <h2>Determine Your Ability Score Modifiers</h2>
+                <p>Your ability score modifiers are what you will use to modify your dice rolls over the course of a game. This number is determined based on your ability score that you just calculated in the last step. Use the following table to determine your ability modifier for each ability and write it in the space next to each ability score.</p>
+                <table id="modifier-table">
+                    <tr>
+                        <th>Ability Score</th>
+                        <th>Ability Modifier</th>
+                        <th>Ability Score</th>
+                        <th>Ability Modifier</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>-5</td>
+                        <td>12-13</td>
+                        <td>+1</td>
+                    </tr>
+                    <tr>
+                        <td>2-3</td>
+                        <td>-4</td>
+                        <td>14-15</td>
+                        <td>+2</td>
+                    </tr>
+                    <tr>
+                        <td>4-5</td>
+                        <td>-3</td>
+                        <td>16-17</td>
+                        <td>+3</td>
+                    </tr>
+                    <tr>
+                        <td>6-7</td>
+                        <td>-2</td>
+                        <td>18-19</td>
+                        <td>+4</td>
+                    </tr>
+                    <tr>
+                        <td>8-9</td>
+                        <td>-1</td>
+                        <td>20-21</td>
+                        <td>+5</td>
+                    </tr>
+                    <tr>
+                        <td>10-11</td>
+                        <td>0</td>
+                        <td>22-23</td>
+                        <td>+6</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="char-description">
+                <h2>Describe Your Character</h2>
+                <p>Now that you know the basic game mechanics of your character, it’s time to get creative in fleshing out the finer details of your character. Come up with a good name for your character, as well as what you want them to look like. Come up with a short history of your character’s life up to this point. What moments in their life really shaped them into the person they are now? In Aeriloth, the sky is literally the limit, so get creative in making your character unique. Reach out to me if you would like help or need more information about the world for your character.</p>
+            </div>
+            <div id="equipment">
+                <h2>Choose Your Starting Equipment</h2>
+                <p>Your character’s class determines a lot of the equipment that they start with; however this is all customizable to make the character that you truly want to play. Look through the guidelines for what your class gives you and if you would like to change anything, reach out to me and we can work it all out. Write your equipment in the equipment section of your character sheet. You now have a fully functional character sheet to play with me in the world of Aeriloth. As you play your character, you will grow and learn new things, so you will be constantly adding and taking away things from your sheet. Good luck to you in playing and I hope you have fun!</p>
+            </div>
         </div>
-        <div id="Aarakocra" class="tabcontent">
-            <h2>Aarakocra</h2>
-            <h3>Bipedal, humanoid birds with the ability to fly</h3>
-            <h4>Traits: Size - Medium, Flight, Talons, Speed - 25 ft walking or 50 ft flying</h4>
-            <img id="aarakocra-img" src="images/aarakocra.jpg" alt="Aarakocra">
-        </div>
-        <div id="Aasimar" class="tabcontent">
-            <h2>Aasimar</h2>
-            <h3>Divine humanoids, believed to be blessed by the gods</h3>
-            <h4>Traits: Size - Medium, Darkvision, Celestial Resistance, Celestial Legacy, Speed - 30 ft walking</h4>
-            <img id="aasimar-img" src="images/aasimar.jpg" alt="Aasimar">
-        </div>
-        <div id="Dragonborn" class="tabcontent">
-            <h2>Dragonborn</h2>
-            <h3>Humanoid dragons with the ability to breathe elemental energy</h3>
-            <h4>Traits: Size - Medium, Draconic Ancestry, Breath Weapon, Damage Resistance, Speed - 30 ft walking</h4>
-            <img id="vdragonborn-img" src="images/dragonborn.jpg" alt="Dragonborn">
-        </div>
-        <div id="Dwarf" class="tabcontent">
-            <h2>Dwarf</h2>
-            <h3>A hardworking people who have carved citadels into the earth</h3>
-            <h4>Traits: Size - Medium, Darkvision, Dwarven Resilience, Dwarven Combat Training, Tool Proficiency, Stonecunning, Speed - 25 ft. walking</h4>
-            <img id="dwarf-img" src="images/dwarf.jpg" alt="Dwarf">
-        </div>
-        <div id="Elf" class="tabcontent">
-            <h2>Elf</h2>
-            <h3>A magical people who possess knowledge of the old ways of magic</h3>
-            <h4>Traits: Size - Medium, Darkvision, Keen Senses, Fey Ancestry, Trance, Speed - 30 ft. walking</h4>
-            <img id="elf-img" src="images/elf.jpg" alt="Elf">
-        </div>
-        <div id="Gnome" class="tabcontent">
-            <h2>Gnome</h2>
-            <h3>Short innovators who have made names for themselves in the field of technology</h3>
-            <h4>Traits: Size - Small, Darkvision, Gnome Cunning, Speed - 25 ft. walking</h4>
-            <img id="gnome-img" src="images/gnome.jpg" alt="Gnome">
-        </div>
-        <div id="Halfling" class="tabcontent">
-            <h2>Halfling</h2>
-            <h3>Short, homy people who have established peaceful residences in both the skies and on the surface</h3>
-            <h4>Traits: Size - Small, Lucky, Brave, Halfling Nimbleness, Speed - 25 ft. walking</h4>
-            <img id="halfling-img" src="images/halfling.jpg" alt="Halfling">
-        </div>
-        <div id="Human" class="tabcontent">
-            <h2>Human</h2>
-            <h3>Hardy people who make up the bulk of people in the world</h3>
-            <h4>Traits: Size - Medium, Skilled, Feat, Speed - 30 ft. walking</h4>
-            <img id="human-img" src="images/human.jpg" alt="Human">
-        </div>
-        <div id="Tiefling" class="tabcontent">
-            <h2>Tiefling</h2>
-            <h3>Born of devils, these humoids face a lot of prejudice in the world</h3>
-            <h4>Traits: Size - Medium, Darkvision, Hellish Resistance, Infernal Legacy, Speed - 30 ft. walking</h4>
-            <img id="tiefling-img" src="images/tiefling.jpg" alt="Tiefling">
-        </div>
-       </div>
-       <div id="class">
-        <h2>Choose Your Character's Class</h2>
-        <p>Every adventurer has a class describing their skills and special talents and the tactics they employ while out adventuring. Keep in mind that in the world of Aeriloth, lowfolk who possess magic are hunted and so they must keep their magic hidden. You can still choose magical characters, but this may influence who your character is. Choose from the classes and write it on your character sheet.</p>
-        <div class="class-tabs">
-            <button class="tablinks" onclick="openTab(event, 'Barbarian')">Barbarian</button>
-            <button class="tablinks" onclick="openTab(event, 'Bard')">Bard</button>
-            <button class="tablinks" onclick="openTab(event, 'Cleric')">Cleric</button>
-            <button class="tablinks" onclick="openTab(event, 'Druid')">Druid</button>
-            <button class="tablinks" onclick="openTab(event, 'Fighter')">Fighter</button>
-            <button class="tablinks" onclick="openTab(event, 'Monk')">Monk</button>
-            <button class="tablinks" onclick="openTab(event, 'Paladin')">Paladin</button>
-            <button class="tablinks" onclick="openTab(event, 'Ranger')">Ranger</button>
-            <button class="tablinks" onclick="openTab(event, 'Rogue')">Rogue</button>
-            <button class="tablinks" onclick="openTab(event, 'Sorcerer')">Sorcerer</button>
-            <button class="tablinks" onclick="openTab(event, 'Warlock')">Warlock</button>
-            <button class="tablinks" onclick="openTab(event, 'Wizard')">Wizard</button>
-        </div>
-        <div id="Barbarian" class="tabcontent">
-            <h2>Barbarian</h2>
-            <h3>A fierce warrior who can enter into a battle rage.</h3>
-            <h4>Main stats should be Constitution and Strength.</h4>
-        </div>
-        <div id="Bard" class="tabcontent">
-            <h2>Bard</h2>
-            <h3>An inspiring magician whose power echoes the music of creation</h3>
-            <h4>Main stat should be Charisma.</h4>
-        </div>
-        <div id="Cleric" class="tabcontent">
-            <h2>Cleric</h2>
-            <h3>A priestly champion who wields divine magic in service of a higher power.</h3>
-            <h4>Main stat should be Wisdom.</h4>
-        </div>
-        <div id="Druid" class="tabcontent">
-            <h2>Druid</h2>
-            <h3>A priest of the Old Faith, wielding the powers of nature and adopting animal forms.</h3>
-            <h4>Main stat should be Wisdom.</h4>
-        </div>
-        <div id="Fighter" class="tabcontent">
-            <h2>Fighter</h2>
-            <h3>A master of martial combat, skilled with a variety of weapons and armor.</h3>
-            <h4>Main stats should be Strength and Dexterity.</h4>
-        </div>
-        <div id="Monk" class="tabcontent">
-            <h2>Monk</h2>
-            <h3>A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection.</h3>
-            <h4>Main stats should be Dexterity and Wisdom.</h4>
-        </div>
-        <div id="Paladin" class="tabcontent">
-            <h2>Paladin</h2>
-            <h3>A holy warrior bound to a sacred oath.</h3>
-            <h4>Main stats should be Strength and Charisma</h4>
-        </div>
-        <div id="Ranger" class="tabcontent">
-            <h2>Ranger</h2>
-            <h3>A ranger who combats threats on the edges of civilization.</h3>
-            <h4>Main stats should be Strength and Dexterity.</h4>
-        </div>
-        <div id="Rogue" class="tabcontent">
-            <h2>Rogue</h2>
-            <h3>A scoundrel who uses stealth and trickery to overcome obstacles and enemies.</h3>
-            <h4>Main stat should be Dexterity.</h4>
-        </div>
-        <div id="Sorcerer" class="tabcontent">
-            <h2>Sorcerer</h2>
-            <h3>A spellcaster who draws on inherent magic from a gift or bloodling.</h3>
-            <h4>Main stat should be Charisma.</h4>
-        </div>
-        <div id="Warlock" class="tabcontent">
-            <h2>Warlock</h2>
-            <h3>A wielder of magic that is derived from a bargain with an extraplanar entity.</h3>
-            <h4>Main stat should be Charisma.</h4>
-        </div>
-        <div id="Wizard" class="tabcontent">
-            <h2>Wizard</h2>
-            <h3>A scholarly magic-user capable of manipulating the structures of reality.</h3>
-            <h4>Main stat should be Intelligence.</h4>
-        </div>
-       </div>
-       <div id="ability-scores">
-        <h2>Determine Your Ability Scores</h2>
-        <p>Much of what your character does in the game is determined by their six abilities: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Each ability has a score that you will write on your character sheet. You will also write an ability modifier next to each score that you will use to modify your dice rolls when you are playing the game. The abilities are defined as: Strength: Measures natural athleticism and bodily power Dexterity: Measures physical agility, reflexes, balance, and poise Constitution: Measures health, stamina, and vital force Intelligence: Measures mental acuity, information recall, and analytical thinking Wisdom: Measures awareness, intuition, and insight Charisma: Measures confidence, eloquence, and leadership There are many different ways to generate your ability scores. We will be using the standard array method in my campaign, but check with your dungeon master if you are not playing with me to determine the best way for you to generate your stats. Keep in mind that the class section above recommends what you make your best stats be. An ability score is a number between 1 and 20 that shows how good your character is with that ability. The higher the number, the better they are. The standard array we will be using are the numbers 15, 14, 13, 12, 10, 8. Determine which of these numbers you would like to occupy each of your abilities, using each number once. As a bonus, you also get to determine one ability that you will increase by an additional 2 points and another ability that you will increase by 1 point. Write your final ability score number in each of the labeled spots on your character sheet.</p>
-       </div>
-       <div id="score-modifiers">
-        <h2>Determine Your Ability Score Modifiers</h2>
-        <p>Your ability score modifiers are what you will use to modify your dice rolls over the course of a game. This number is determined based on your ability score that you just calculated in the last step. Use the following table to determine your ability modifier for each ability and write it in the space next to each ability score. Score - Modifier 1 - -5 2-3 - -4 4-5 - -3 6-7 - -2 8-9 - -1 10-11 - 0 12-13 - +1 14-15 - +2 16-17 - +3 18-19 - +4 20 - +5</p>
-       </div>
-       <div id="char-description">
-        <h2>Describe Your Character</h2>
-        <p>Now that you know the basic game mechanics of your character, it’s time to get creative in fleshing out the finer details of your character. Come up with a good name for your character, as well as what you want them to look like. Come up with a short history of your character’s life up to this point. What moments in their life really shaped them into the person they are now? In Aeriloth, the sky is literally the limit, so get creative in making your character unique. Reach out to me if you would like help or need more information about the world for your character.</p>
-       </div>
-       <div id="equipment">
-        <h2>Choose Your Starting Equipment</h2>
-        <p>Your character’s class determines a lot of the equipment that they start with; however this is all customizable to make the character that you truly want to play. Look through the guidelines for what your class gives you and if you would like to change anything, reach out to me and we can work it all out. Write your equipment in the equipment section of your character sheet. You now have a fully functional character sheet to play with me in the world of Aeriloth. As you play your character, you will grow and learn new things, so you will be constantly adding and taking away things from your sheet. Good luck to you in playing and I hope you have fun!</p>
-       </div>
     </main>
     <footer>
         <p>Aeriloth &copy; 2023 - Zachary Wetsel</p>
+            <p><a href="index.html">Home</a></p>
             <p><a href="site-plan.html">Site Plan</a></p>
+            <p id="copyright">Aeriloth is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

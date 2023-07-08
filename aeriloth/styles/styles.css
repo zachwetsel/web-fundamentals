@@ -4,6 +4,9 @@
     margin: 0 auto;
     color: black;
 }
+a {
+    text-decoration: underline dotted;
+}
 nav a {
     text-align: center;
     color: white;
@@ -19,6 +22,10 @@ body {
 }
 h2 {
     font-family: Macondo, Georgia, 'Times New Roman', Times, serif;
+}
+p {
+    font-family: Abel, Helvetica, sans-serif;
+    
 }
 header {
     background-color: #018839;
@@ -80,7 +87,7 @@ nav {
 }
 #first-thing {
     background-color: #6CDC2D;
-    padding: 25px;
+    padding: 40px;
     grid-column: 1/4;
     grid-row: 2/3;
     display: grid;
@@ -101,7 +108,7 @@ nav {
 }
 #second-thing {
     background-color: #018839;
-    padding: 25px;
+    padding: 40px;
     grid-column: 1/4;
     grid-row: 3/4;
     display: grid;
@@ -122,7 +129,7 @@ nav {
 }
 #third-thing {
     background-color: #6E6F83;
-    padding: 25px;
+    padding: 40px;
     grid-column: 1/4;
     grid-row: 4/5;
     display: grid;
@@ -143,7 +150,7 @@ nav {
 }
 #fourth-thing {
     background-color: #92EAFF;
-    padding: 25px;
+    padding: 40px;
     grid-column: 1/4;
     grid-row: 5/6;
     display: grid;
@@ -163,7 +170,7 @@ nav {
     margin-top: -20px;
 }
 #fifth-thing {
-    padding: 25px;
+    padding: 40px;
     grid-column: 1/4;
     grid-row: 6/7;
     display: grid;
@@ -185,7 +192,7 @@ nav {
 }
 #sixth-thing {
     background-color: #6CDC2D;
-    padding: 25px;
+    padding: 40px;
     grid-column: 1/4;
     grid-row: 7/8;
     display: grid;
@@ -286,4 +293,261 @@ footer p {
 #copyright {
     font-size: 14px;
     grid-column: 4/5;
+}
+#creation-intro {
+    background-color: #6CDC2D;
+    padding: 40px;
+}
+#creation-intro h2 {
+    text-align: center;
+}
+#character-sheet {
+    padding: 40px;
+}
+#character-sheet h2 {
+    text-align: right;
+}
+#race {
+    padding: 40px;
+    background-color: #018839;
+    color: white;
+}
+#race-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 390px 390px 390px;
+    justify-items: center;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    border: 1px solid #6CDC2D;
+    perspective: 1000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+.flip-card-back {
+    background-color: #6E6F83;
+    color: #6CDC2D;
+    transform: rotateY(180deg);
+    padding: 10px;
+}
+.flip-card-front img {
+    width: 300px;
+}
+.flip-card-back h3 {
+    font-size: 18px;
+}
+#aarakocra {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#aasimar {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+#dragonborn {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+#dwarf {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+#elf {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+#gnome {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+#halfling {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+#human {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+#tiefling {
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+/*.race-tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.race-tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.race-tabs button:hover {
+    background-color: #ddd;
+}
+.race-tabs button.active {
+    background-color: #ccc;
+}
+.tabcontent {
+    display: grid;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    color: black;
+    background-color: #f1f1f1;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+.tabcontent .tabintabcontent {
+    text-align: left;
+    grid-column: 1/3;
+    grid-row-start: 2;
+}
+.tabcontent img {
+    grid-column: 3/4;
+    grid-row: 1/5;
+}
+.tabcontent h2 {
+    grid-column: 1/2;
+    text-align: center;
+}
+#overview h3 {
+    grid-column: 1/3;
+}
+#overview h4 {
+    grid-column: 1/3;
+}
+.race-info {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.race-info button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 8px;
+    transition: 0.3s;
+}
+.race-info button:hover {
+    background-color: #ddd;
+}
+.race-info button.active {
+    background-color: #ccc;
+}
+.tabintabcontent {
+    display: grid;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    grid-template-columns: 1fr 1fr;
+}
+.tabintabcontent h3 {
+    grid-column: 1/2;
+}
+.tabintabcontent p {
+    grid-column: 2/3;
+}
+.tabintabcontent h4 {
+    grid-column: 1/3;
+}*/
+#class {
+    padding: 40px;
+    background-color: #6E6F83;
+}
+#class-header {
+    text-align: right;
+}
+.class-tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.tab button {
+    background-color: #ccc;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.tab button.active {
+    background-color: #018839;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #ccc;
+}
+#barbarian, #bard, #cleric, #druid, #fighter, #fighter, #monk, #paladin, #ranger, #rogue, #sorcerer, #warlock, #wizard {
+    text-align: left;
+}
+#ability-scores {
+    padding: 40px;
+    background-color: #92EAFF;
+}
+#score-modifiers {
+    padding: 40px;
+    background-color: #6CDC2D;
+}
+#score-modifiers h2 {
+    text-align: right;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+#ability-table {
+    text-align: left;
+}
+th {
+    padding: 0 25px;
+}
+tr:hover {
+    background-color: #018839;
+    color: white;
+}
+#modifier-table {
+    text-align: center;
+}
+#char-description {
+    padding: 40px;
+}
+#equipment {
+    background-color: #018839;
+    color: white;
+    padding: 40px;
+}
+#equipment h2 {
+    text-align: right;
 }
