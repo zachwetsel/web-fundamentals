@@ -57,7 +57,7 @@ nav {
 }
 #hero-img {
     width: 100%;
-    height: 700px;
+    height: 900px;
 }
 #hero {
     display: grid;
@@ -74,11 +74,11 @@ nav {
     grid-row: 2/3;
     background-color: #6E6F83;
     opacity: 70%;
+    padding: 10px;
 }
 #six-things {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    margin-top: 10px;
 }
 #six-things h2 {
     color: #018839;
@@ -550,4 +550,97 @@ tr:hover {
 }
 #equipment h2 {
     text-align: right;
+}
+#religion-box {
+    color: white;
+    background-color: #018839;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    padding: 40px;
+}
+#religion-box h2 {
+    grid-column: 1/2;
+    grid-row: 1/2
+}
+#religion-box p {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+#religion-box h3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+    margin-top: -20px;
+}
+#religion-box p:first-of-type {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: -20px;
+}
+#religion-box img {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    padding: 20px;
+}
+
+#gods-header {
+    color: #018839;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+#hall-of-seven-box .tabcontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#hall-of-seven-box .tabcontent h2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+}
+#hall-of-seven-box .tabcontent h3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+}
+#hall-of-seven-box .tabcontent p {
+    grid-column: 1/2;
+    padding-left: 40px;
+}
+#hall-of-seven-box .tabcontent img {
+    grid-column: 2/3;
+    grid-row: 1/6
+}
+#magic-box {
+    background-color: #6CDC2D;
+    padding: 40px;
+}
+#differences-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#lowfolk {
+    background-color: #6E6F83;
+    padding: 40px;
+}
+#lowfolk h2 {
+    text-align: center;
+}
+#highfolk h2 {
+    text-align: center;
+}
+#highfolk {
+    background-color: #92EAFF;
+    padding: 40px;
+}
+
+
+@media screen and (max-width: 900px) {
+    header, nav, main, footer {
+        display: block;
+    }
+    #hero-msg {
+        width: 100%;
+        
+    }
 }
