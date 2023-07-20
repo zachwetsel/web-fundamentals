@@ -25,7 +25,9 @@ h2 {
 }
 p {
     font-family: Abel, Helvetica, sans-serif;
-    
+}
+h5 {
+    color: #018839;
 }
 header {
     background-color: #018839;
@@ -394,90 +396,6 @@ footer p {
     grid-column: 3/4;
     grid-row: 5/6;
 }
-/*.race-tabs {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-.race-tabs button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-}
-.race-tabs button:hover {
-    background-color: #ddd;
-}
-.race-tabs button.active {
-    background-color: #ccc;
-}
-.tabcontent {
-    display: grid;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    color: black;
-    background-color: #f1f1f1;
-    grid-template-columns: 1fr 1fr 2fr;
-}
-.tabcontent .tabintabcontent {
-    text-align: left;
-    grid-column: 1/3;
-    grid-row-start: 2;
-}
-.tabcontent img {
-    grid-column: 3/4;
-    grid-row: 1/5;
-}
-.tabcontent h2 {
-    grid-column: 1/2;
-    text-align: center;
-}
-#overview h3 {
-    grid-column: 1/3;
-}
-#overview h4 {
-    grid-column: 1/3;
-}
-.race-info {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-.race-info button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 7px 8px;
-    transition: 0.3s;
-}
-.race-info button:hover {
-    background-color: #ddd;
-}
-.race-info button.active {
-    background-color: #ccc;
-}
-.tabintabcontent {
-    display: grid;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    grid-template-columns: 1fr 1fr;
-}
-.tabintabcontent h3 {
-    grid-column: 1/2;
-}
-.tabintabcontent p {
-    grid-column: 2/3;
-}
-.tabintabcontent h4 {
-    grid-column: 1/3;
-}*/
 #class {
     padding: 40px;
     background-color: #6E6F83;
@@ -511,6 +429,20 @@ footer p {
 }
 #barbarian, #bard, #cleric, #druid, #fighter, #fighter, #monk, #paladin, #ranger, #rogue, #sorcerer, #warlock, #wizard {
     text-align: left;
+}
+#class .tabcontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#class .tabcontent h4 {
+    grid-column: 1/2;
+}
+#class .tabcontent p {
+    grid-column: 1/2;
+}
+#class .tabcontent img {
+    grid-column: 2/3;
+    grid-row: 1/6;
 }
 #ability-scores {
     padding: 40px;
@@ -583,7 +515,6 @@ tr:hover {
     grid-row: 1/5;
     padding: 20px;
 }
-
 #gods-header {
     color: #018839;
     padding-left: 40px;
