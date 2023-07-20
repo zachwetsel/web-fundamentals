@@ -574,4 +574,32 @@ tr:hover {
         width: 100%;
         
     }
+    #hero-img {
+        width: 100%;
+        height: 100%;
+    }
+    #race-cards {
+        display: none;
+    }
+    #class .tabcontent {
+        display: block;
+    }
+    #class .tabcontent img {
+        width: 100%;
+    }
+    .ability-table {
+        width: 100%;
+    }
+    #religion-box {
+        display: block;
+    }
+    #religion-box img {
+        width: 100%;
+    }
+   #hall-of-seven-box {
+    display: block;
+   }
+   #hall-of-seven-box img {
+    width: 100%;
+   }
 }
